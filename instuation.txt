@@ -1,0 +1,11 @@
+---------futurach-------------
+1 -  registion.
+2. - login.
+3. - logout system.
+4. - profile update.
+5. - password chinge.
+6. - forget password.
+7. - email varfication.
+8. - custom torast massages. 
+9. - profile page
+----------end-----------
