@@ -1,0 +1,9 @@
+<?php
+require __DIR__ . '/../../vendor/autoload.php';
+
+use Config\Path;
+
+// Example usage
+echo Path::base_path(); // Outputs the base path
+echo Path::public_path('images'); // Outputs the public path concatenated with 'images'
+?>
