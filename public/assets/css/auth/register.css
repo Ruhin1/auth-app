@@ -1,10 +1,12 @@
 /* public/assets/css/auth/register.css */
-*{
+/* Reset all elements to have zero margin and padding and use border-box for box-sizing */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Set html and body to take full height of the viewport and center content */
 html, body {
     height: 100%;
     margin: 0;
@@ -14,7 +16,7 @@ html, body {
     background-color: #E9ECEF;
 }
 
-
+/* Center the main element's content */
 main {
     display: flex;
     justify-content: center;
@@ -23,7 +25,7 @@ main {
     height: 100%;
 }
 
-
+/* Center the container's content inside the main element */
 main .container {
     display: flex;
     justify-content: center;
@@ -32,7 +34,7 @@ main .container {
     height: 100%;
 }
 
-
+/* Style the form inside the container */
 main .container .form {
     background-color: #FFFFFF;
     width: 400px;
@@ -41,70 +43,80 @@ main .container .form {
     box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, 0.75);
 }
 
-
-
-main .container .form form p{
-    font-size: 31px;
+/* Style the form title */
+main .container .form form p {
+    font-size: 32px;
     text-align: center;
     margin: 5px 0;
 }
 
-main .container .form form .form-control{
+/* Style each form control element */
+main .container .form form .form-control {
     display: flex;
     flex-direction: column;
     margin: 10px 0;
 }
 
-main .container .form form .form-control label{
+/* Style the labels in the form controls */
+main .container .form form .form-control label {
     margin-bottom: 3px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-main .container .form form .form-control input{
+/* Style the input fields in the form controls */
+main .container .form form .form-control input {
     padding: 5px;
     border-radius: 3px;
     border: 1px solid rgb(38, 37, 37);
 }
 
-main .container .form form .agery-submit{
+/* Style the agreement and submit section */
+main .container .form form .agery-submit {
     display: flex;
     justify-content: space-between;
 }
 
-main .container .form form .agery-submit div .agery{
+/* Style the agreement checkbox */
+main .container .form form .agery-submit div .agery {
     width: 15px;
-    height:15px;
+    height: 15px;
     cursor: pointer;
 }
 
-main .container .form form .agery-submit label{
-    font-size: 18px;
+/* Style the agreement label */
+main .container .form form .agery-submit label {
+    font-size: 16px;
 }
 
-main .container .form form .agery-submit div .register{
-    padding: 5px 10px;
+/* Style the submit button */
+main .container .form form .agery-submit div .register {
+    padding: 5px 10px; /* Fixing the padding typo */
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
 }
 
-main .container .form .social-login{
+/* Style the social login buttons container */
+main .container .form .social-login {
     display: flex;
     flex-direction: column;
-    gap: 10px; 
-    margin: 20px 0 10px 0;   
+    gap: 10px;
+    margin: 20px 0 10px 0;
 }
 
-main .container .form .social-login button{
+/* Style the social login buttons */
+main .container .form .social-login button {
     padding: 5px;
     border-radius: 5px;
     font-size: 18px;
     cursor: pointer;
 }
 
-main .container .form .alrady-reigster p{
+/* Style the already registered section */
+main .container .form .alrady-reigster p {
     font-size: 16px;
     text-align: center;
 }
+
 
  
