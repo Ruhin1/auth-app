@@ -87,6 +87,7 @@ main .container .form form .form-control .eye-password .eye .eye-checkbox {
   min-height: 100%;
   border: 1px solid rgb(38, 37, 37);
   border-radius: 3px;
+  cursor: pointer;
 }
 
 /* Style the labels in the form controls */
