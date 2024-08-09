@@ -58,6 +58,37 @@ main .container .form form .form-control {
   margin: 10px 0;
 }
 
+main .container .form form .form-control div .error-masage {
+  color: red;
+}
+
+/* Align password input and eye icon side by side */
+main .container .form form .form-control .eye-password {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Password input takes up most of the width */
+main .container .form form .form-control .eye-password .password {
+  min-width: 92%;
+}
+
+/* Center the eye icon in its space */
+main .container .form form .form-control .eye-password .eye {
+  min-width: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the checkbox with full width/height, border, and rounded corners */
+main .container .form form .form-control .eye-password .eye .eye-checkbox {
+  min-width: 100%;
+  min-height: 100%;
+  border: 1px solid rgb(38, 37, 37);
+  border-radius: 3px;
+}
+
 /* Style the labels in the form controls */
 main .container .form form .form-control label {
   margin-bottom: 3px;

@@ -40,6 +40,10 @@ use Config\path;
                 placeholder="MD Tonmoy Islam"
                 required
               />
+              <!-- any error masage showing -->
+              <div>
+                <strong class="error-masage"></strong>
+              </div>
             </div>
 
             <!-- Form control for last name -->
@@ -52,6 +56,10 @@ use Config\path;
                 placeholder="Ruhin"
                 required
               />
+              <!-- any error masage showing -->
+              <div>
+                <strong class="error-masage"></strong>
+              </div>
             </div>
 
             <!-- Form control for email -->
@@ -64,21 +72,54 @@ use Config\path;
                 placeholder="mdruhinahmed93@gmail.com"
                 required
               />
+              <div>
+                <strong class="error-masage"></strong>
+              </div>
             </div>
 
-            <!-- Form control for password -->
+            <!-- Form control for mobile number -->
             <div class="form-control">
-              <label for="password">Enter Password</label>
+              <label for="mobile-number">Enter Mobile Number</label>
               <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="password123"
-                onclick="Toggle()"
+                type="number"
+                name="mobile-number"
+                id="mobile-number"
+                placeholder="018xx-xxxxxx"
                 required
               />
               <div>
-                <input type="checkbox" name="eye" id="eye" />
+                <strong class="error-masage"></strong>
+              </div>
+            </div>
+
+            <!-- Form control for eye checkbox and password element -->
+            <div class="form-control">
+              <label for="password">Enter Password</label>
+
+              <!-- Container for the password input and eye icon -->
+              <div class="eye-password">
+                <!-- Password input field -->
+                <input
+                  type="password"
+                  name="password"
+                  class="password"
+                  id="password"
+                  placeholder="password123"
+                  required
+                />
+
+                <!-- Eye icon checkbox for toggling password visibility -->
+                <div class="eye">
+                  <input
+                    type="checkbox"
+                    name="eye"
+                    class="eye-checkbox"
+                    id="eye-checkbox"
+                  />
+                </div>
+              </div>
+              <div>
+                <strong class="error-masage"></strong>
               </div>
             </div>
 
@@ -92,6 +133,10 @@ use Config\path;
                 placeholder="password123"
                 required
               />
+              <!-- any error masage showing -->
+              <div>
+                <strong class="error-masage"></strong>
+              </div>
             </div>
 
             <!-- Agreement and submit section -->
@@ -137,16 +182,19 @@ use Config\path;
     <footer></footer>
 
     <script>
-      // Change the type of input to password or text
-      function Toggle() {
-        let temp = document.getElementById("password");
+      const togglePassword = document.getElementById("eye-checkbox");
 
-        if (temp.type === "password") {
-          temp.type = "text";
+      togglePassword.addEventListener("change", function () {
+        var password = document.getElementById("password");
+        var confirmPassword = document.getElementById("confirm-password");
+        if (this.checked) {
+          password.type = "text";
+          confirmPassword.type = "text";
         } else {
-          temp.type = "password";
+          password.type = "password";
+          confirmPassword.type = "password";
         }
-      }
+      });
     </script>
   </body>
 </html>
