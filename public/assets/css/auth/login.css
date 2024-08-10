@@ -57,6 +57,7 @@ main .container .form form .form-control {
   margin: 10px 0;
 }
 
+ /* Style error any input  field */
 main .container .form form .form-control div .error-masage {
   color: red;
 }
@@ -103,25 +104,14 @@ main .container .form form .form-control input {
   border: 1px solid rgb(38, 37, 37);
 }
 
-/* Style the agreement and submit section */
-main .container .form form .agery-submit {
-  display: flex;
-  justify-content: end;
-}
-
-/* Style the agreement label */
-main .container .form form .agery-submit label {
-  font-size: 16px;
-  text-transform: capitalize;
-}
-
 /* Style the submit button */
-main .container .form form .agery-submit div .login {
+main .container .form form .form-control .submit {
   padding: 5px 10px; /* Fixing the padding typo */
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
 }
+
 
 /* Style the social login buttons container */
 main .container .form .social-login {
@@ -161,3 +151,4 @@ main .container .form .alrady-reigster p {
     min-width: 400px;
   }
 }
+ 

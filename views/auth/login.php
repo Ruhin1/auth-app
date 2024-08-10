@@ -79,18 +79,15 @@ use Config\path;
               </div>
             </div>
 
-            <!-- Agreement and submit section -->
-            <div class="agery-submit">
-              <div>
-                <!-- Submit button -->
+            <!-- Style submit section -->
+            <div class="form-control">
                 <input
                   type="submit"
                   name="login"
                   value="LOGIN"
                   id="login"
-                  class="login"
+                  class="submit"
                 />
-              </div>
             </div>
           </form>
 
@@ -120,18 +117,16 @@ use Config\path;
 
     <!-- js file links -->
     <script src="<?php echo htmlspecialchars(Path::public_url('assets/toastr/toastr.min.js')) ?>"></script>
-
+  
     <script>
+      // Toggle password visibility based on checkbox state
       const togglePassword = document.getElementById("eye-checkbox");
 
       togglePassword.addEventListener("change", function () {
         var password = document.getElementById("password");
-        if (this.checked) {
-          password.type = "text";
-        } else {
-          password.type = "password";
-        }
+        password.type = this.checked ? "text" : "password";
       });
     </script>
+
   </body>
 </html>

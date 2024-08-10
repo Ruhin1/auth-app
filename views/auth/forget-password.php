@@ -67,7 +67,7 @@ use Config\path;
         </div>
       </div>
     </main>
-
+ 
     <!-- Footer section (currently empty) -->
     <footer></footer>
     

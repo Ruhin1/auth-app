@@ -104,13 +104,19 @@ use Config\path;
 
     <!-- js file links -->
     <script src="<?php echo htmlspecialchars(Path::public_url('assets/toastr/toastr.min.js')) ?>"></script>
-
+    
     <script>
+      // Get the checkbox element that toggles the password visibility
       const togglePassword = document.getElementById("eye-checkbox");
-
+     
+      // Add an event listener for when the checkbox state changes
       togglePassword.addEventListener("change", function () {
+        // Get the password and confirm password input fields
         var password = document.getElementById("password");
         var confirmPassword = document.getElementById("confirm-password");
+
+        // If the checkbox is checked, show the passwords as plain text
+        // If unchecked, hide the passwords by setting the type to 'password'
         if (this.checked) {
           password.type = "text";
           confirmPassword.type = "text";
@@ -120,5 +126,6 @@ use Config\path;
         }
       });
     </script>
+
   </body>
 </html>
