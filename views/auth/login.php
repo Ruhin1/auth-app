@@ -15,7 +15,7 @@ use Config\path;
     <!-- Link to the external CSS file for styling the register page -->
     <link
       rel="stylesheet"
-      href="<?php echo htmlspecialchars(Path::public_url('assets/css/auth/register.css')) ?>"
+      href="<?php echo htmlspecialchars(Path::public_url('assets/css/auth/login.css')) ?>"
     />
   </head>
   <body>
@@ -28,65 +28,19 @@ use Config\path;
         <div class="form">
           <!-- Registration form -->
           <form action="" method="POST">
-            <p>Register</p>
+            <p>Login</p>
 
             <!-- Form control for first name -->
             <div class="form-control">
-              <label for="first-name">Enter First Name</label>
+              <label for="first-name">Enter Email or user or number</label>
               <input
                 type="text"
-                name="first-name"
-                id="first-name"
-                placeholder="MD Tonmoy Islam"
-                required
-              />
-              <!-- any error masage showing -->
-              <div>
-                <strong class="error-masage"></strong>
-              </div>
-            </div>
-
-            <!-- Form control for last name -->
-            <div class="form-control">
-              <label for="last-name">Enter Last Name</label>
-              <input
-                type="text"
-                name="last-name"
-                id="last-name"
-                placeholder="Ruhin"
-                required
-              />
-              <!-- any error masage showing -->
-              <div>
-                <strong class="error-masage"></strong>
-              </div>
-            </div>
-
-            <!-- Form control for email -->
-            <div class="form-control">
-              <label for="email">Enter Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
+                name="e-n-u-field"
+                id="e-n-u-field"
                 placeholder="mdruhinahmed93@gmail.com"
                 required
               />
-              <div>
-                <strong class="error-masage"></strong>
-              </div>
-            </div>
-
-            <!-- Form control for mobile number -->
-            <div class="form-control">
-              <label for="mobile-number">Enter Mobile Number</label>
-              <input
-                type="number"
-                name="mobile-number"
-                id="mobile-number"
-                placeholder="018xx-xxxxxx"
-                required
-              />
+              <!-- any error masage showing -->
               <div>
                 <strong class="error-masage"></strong>
               </div>
@@ -123,22 +77,6 @@ use Config\path;
               </div>
             </div>
 
-            <!-- Form control for confirm password -->
-            <div class="form-control">
-              <label for="confirm-password">Enter Confirm Password</label>
-              <input
-                type="password"
-                name="confirm-password"
-                id="confirm-password"
-                placeholder="password123"
-                required
-              />
-              <!-- any error masage showing -->
-              <div>
-                <strong class="error-masage"></strong>
-              </div>
-            </div>
-
             <!-- Agreement and submit section -->
             <div class="agery-submit">
               <div>
@@ -156,10 +94,10 @@ use Config\path;
                 <!-- Submit button -->
                 <input
                   type="submit"
-                  name="register"
-                  value="Register"
-                  id="register"
-                  class="register"
+                  name="login"
+                  value="LOGIN"
+                  id="login"
+                  class="login"
                 />
               </div>
             </div>
@@ -167,13 +105,17 @@ use Config\path;
 
           <!-- Social login buttons -->
           <div class="social-login">
-            <button>Sign up using Facebook</button>
-            <button>Sign up using Google</button>
+            <button>Sign in using Facebook</button>
+            <button>Sign in using Google</button>
+          </div>
+
+          <div class="forget-password">
+            <a href="#">I forgot my password</a>
           </div>
 
           <!-- Already registered section with a link to login -->
           <div class="already-register">
-            <p>I have already registered <a href="#">LOGIN NOW</a></p>
+            <p>I have do not registered <a href="#">SINGUP NOW</a></p>
           </div>
         </div>
       </div>
@@ -187,13 +129,10 @@ use Config\path;
 
       togglePassword.addEventListener("change", function () {
         var password = document.getElementById("password");
-        var confirmPassword = document.getElementById("confirm-password");
         if (this.checked) {
           password.type = "text";
-          confirmPassword.type = "text";
         } else {
           password.type = "password";
-          confirmPassword.type = "password";
         }
       });
     </script>

@@ -1,6 +1,6 @@
 ---------futurach-------------
-1 -  registion.
-2. - login.
+1 -  registion.//compleate//
+2. - login.//compleate//
 3. - logout system.
 4. - profile update.
 5. - password chinge.

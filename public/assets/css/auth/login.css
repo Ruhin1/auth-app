@@ -124,7 +124,7 @@ main .container .form form .agery-submit label {
 }
 
 /* Style the submit button */
-main .container .form form .agery-submit div .register {
+main .container .form form .agery-submit div .login {
   padding: 5px 10px; /* Fixing the padding typo */
   border-radius: 5px;
   cursor: pointer;
@@ -145,6 +145,14 @@ main .container .form .social-login button {
   border-radius: 5px;
   font-size: 18px;
   cursor: pointer;
+}
+
+main .container .form .forget-password {
+  margin: 5px;
+}
+
+main .container .form .forget-password a {
+  font-size: 16px;
 }
 
 /* Style the already registered section */
