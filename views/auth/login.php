@@ -12,6 +12,8 @@ use Config\path;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
+     <!-- Toastr CSS -->
+     <link rel="stylesheet" href="<?php echo htmlspecialchars(Path::public_url('assets/toastr/toastr.min.css')) ?>">
     <!-- Link to the external CSS file for styling the register page -->
     <link
       rel="stylesheet"
@@ -112,6 +114,12 @@ use Config\path;
 
     <!-- Footer section (currently empty) -->
     <footer></footer>
+
+    <!-- jQuery (required for Toastr) -->
+    <script src="<?php echo htmlspecialchars(Path::public_url('assets/jquery/jquery-3.6.0.min.js')) ?>"></script>
+
+    <!-- js file links -->
+    <script src="<?php echo htmlspecialchars(Path::public_url('assets/toastr/toastr.min.js')) ?>"></script>
 
     <script>
       const togglePassword = document.getElementById("eye-checkbox");

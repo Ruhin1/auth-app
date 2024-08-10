@@ -3,9 +3,10 @@
 2. - login.//compleate//
 3. - logout system.
 4. - profile update.
-5. - password chinge.
-6. - forget password.
+5. - password chinge.//compleate//
+6. - forget password.//compleate//
 7. - email varfication.
-8. - custom torast massages. 
+8. - torast massages. //compleate// 
 9. - profile page
 ----------end-----------
+ 
