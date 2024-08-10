@@ -26,11 +26,11 @@ use Config\path;
     <main>
       <div class="container">
         <div class="form">
-          <!-- Registration form -->
+          <!-- Login form --> 
           <form action="" method="POST">
             <p>Login</p>
 
-            <!-- Form control for first name -->
+            <!-- Form control for Email Number Username -->
             <div class="form-control">
               <label for="first-name">Enter Email or user or number</label>
               <input
@@ -79,17 +79,6 @@ use Config\path;
 
             <!-- Agreement and submit section -->
             <div class="agery-submit">
-              <div>
-                <!-- Agreement checkbox -->
-                <input
-                  type="checkbox"
-                  name="agery"
-                  id="agery"
-                  class="agery"
-                  required
-                />
-                <label for="agery">I agree to the <span>terms</span></label>
-              </div>
               <div>
                 <!-- Submit button -->
                 <input

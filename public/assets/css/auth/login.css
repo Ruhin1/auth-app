@@ -1,4 +1,3 @@
-/* public/assets/css/auth/register.css */
 /* Reset all elements to have zero margin and padding and use border-box for box-sizing */
 * {
   margin: 0;
@@ -107,14 +106,7 @@ main .container .form form .form-control input {
 /* Style the agreement and submit section */
 main .container .form form .agery-submit {
   display: flex;
-  justify-content: space-between;
-}
-
-/* Style the agreement checkbox */
-main .container .form form .agery-submit div .agery {
-  width: 15px;
-  height: 15px;
-  cursor: pointer;
+  justify-content: end;
 }
 
 /* Style the agreement label */
@@ -147,10 +139,12 @@ main .container .form .social-login button {
   cursor: pointer;
 }
 
+/* Add margin around the 'Forget Password' section */
 main .container .form .forget-password {
   margin: 5px;
 }
 
+/* Style the 'Forget Password' link with a specific font size */
 main .container .form .forget-password a {
   font-size: 16px;
 }
