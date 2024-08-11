@@ -1,4 +1,26 @@
-sdfggg yttry
-gsdgg
-gsdgg
-dsgsd
+<?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Example check for login
+    if ($username === 'admin' && $password === 'password') {
+        $_SESSION['success'] = "Welcome back, $username!";
+    } else {
+        $_SESSION['error'] = "Invalid credentials!";
+    }
+}
+
+// Display toastr notifications based on session
+if (isset($_SESSION['success'])) {
+    echo "<script>toastr.success('" . $_SESSION['success'] . "');</script>";
+    unset($_SESSION['success']);
+}
+
+if (isset($_SESSION['error'])) {
+    echo "<script>toastr.error('" . $_SESSION['error'] . "');</script>";
+    unset($_SESSION['error']);
+}
+?>

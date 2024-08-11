@@ -1,0 +1,107 @@
+/* Reset all elements to have zero margin and padding and use border-box for box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set html and body to take full height of the viewport and center content */
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9ecef;
+  }
+  
+  /* Center the main element's content */
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Center the container's content inside the main element */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+/* Styling the email verification container with background, padding, and shadow */
+.email-verification {
+  background-color: #ffffff;
+  width: 200px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* Aligning OTP input fields in a row with space between them */
+.otp-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Styling individual OTP input boxes with uniform size, text alignment, and border */
+.otp-inputs input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+/* Styling the description text with margin, font size, and center alignment */
+.description {
+    margin: 15px 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Highlighting the email text with bold font, background color, and rounded corners */
+.description span {
+    font-weight: bold;
+    background-color: gray;
+    border-radius: 5px;
+}
+
+/* Initially hiding the error message, with styling for visibility when shown */
+.error {
+    display: none;
+    color: red;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Styling the submit button with full width, rounded corners, and cursor pointer */
+.submit {
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Changing the appearance of the submit button when disabled */
+.submit:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+  
+
+  /* Tablet and Desktop view */
+  @media (min-width: 768px) {
+    .email-verification {
+      min-width: 400px;
+    }
+  }
+  
