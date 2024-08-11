@@ -23,7 +23,26 @@ use Config\path;
   </head>
   <body>
     <!-- Header section (currently empty) -->
-    <header></header>
+    <header>
+      <div class="navber">
+        <div class="logo">
+          <p>Auth App</p>
+        </div>
+        <div class="navitems">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Contact</a>
+              <a href="#">Privecy Polcy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="profile">
+          <img src="<?php echo htmlspecialchars(Path::public_url('assets/images/demo-profile-image.jpg')) ?>" alt="profile">
+        </div>
+      </div>
+    </header>
 
     <!-- Main section to contain the form -->
     <main>

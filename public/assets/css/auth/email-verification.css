@@ -8,16 +8,16 @@
   /* Set html and body to take full height of the viewport and center content */
   html,
   body {
-    height: 100%;
+    /* height: 100%; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #e9ecef;
   }
-  
+   
   /* Center the main element's content */
-  main {
+  main { 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,6 +95,66 @@
     background-color: #ccc;
     cursor: not-allowed;
 }
+
+
+.navber{
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, 0.75);
+  background-color: #ffffff;
+  padding: 0 20px;
+  border: 1px solid red;
+}
+
+.logo{
+  width: 20%;
+  border: 1px solid black;
+}
+
+.navitems{
+  width: 60%;
+  border: 1px solid black;
+}
+
+.navitems ul{
+ display: flex;
+ justify-content: right;
+}
+
+.navitems ul li{
+  list-style: none;
+}
+
+.navitems ul li a{
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 10px;
+  opacity: 0.7;
+}
+ 
+.navitems ul li a:hover{
+  opacity: 1;
+  border-bottom: 1px solid black;
+}
+
+.profile{
+  display: flex;
+  justify-content: right; 
+  width: 20%;
+  border: 1px solid black;
+}
+
+.profile img{
+  width: 50px;
+  height: auto;
+  border-radius: 100px;
+  cursor: pointer;
+  border: 5px solid black;
+}
+
+
 
   
 
