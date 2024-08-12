@@ -1,39 +1,196 @@
 /* Reset all elements to have zero margin and padding and use border-box for box-sizing */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Set html and body to take full height of the viewport and center content */
-  html,
-  body {
-    /* height: 100%; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    margin: 0;
-    background-color: #e9ecef;
-  }
-   
-  /* Center the main element's content */
-  main { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-  
-  /* Center the container's content inside the main element */
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Set html and body to take full height of the viewport and center content */
+html, body {
+ /* height: 100%;
+  */
+ /* display: flex;
+  */
+ /* justify-content: center;
+  */
+ /* align-items: center;
+  */
+  margin: 0;
+  background-color: #e9ecef;
+}
+/*======================= header section all css code ==========================*/
+/* Navbar styling */
+.navber {
+  display: flex;
+ /* Align in a row */
+  justify-content: space-between;
+ /* Space out elements */
+  box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.75);
+ /* Add shadow */
+  background-color: #ffffff;
+ /* White background */
+  padding: 0 20px;
+ /* Horizontal padding */
+  border: 1px solid red;
+ /* Red border */
+  height: 53px;
+ /* Set height */
+}
+/* Logo styling */
+.logo {
+  width: 20%;
+ /* 20% width */
+  border: 1px solid black;
+ /* Black border */
+  display: flex;
+ /* Flexbox layout */
+  align-items: center;
+ /* Center vertically */
+}
+/* Logo link */
+.logo a {
+  text-decoration: none;
+ /* No underline */
+  font-size: 20px;
+ /* Font size */
+  color: black;
+ /* Black text */
+}
+/* Navbar items */
+.navitems {
+  width: 60%;
+ /* 60% width */
+  border: 1px solid black;
+ /* Black border */
+  display: flex;
+ /* Flexbox layout */
+  align-items: center;
+ /* Center vertically */
+  justify-content: right;
+ /* Align right */
+}
+/* Navbar list items */
+.navitems ul li {
+  list-style: none;
+ /* No bullet points */
+}
+/* Navbar links */
+.navitems ul li a {
+  color: black;
+ /* Black text */
+  font-size: 16px;
+ /* Font size */
+  font-weight: bold;
+ /* Bold text */
+  text-decoration: none;
+ /* No underline */
+  margin: 0 10px;
+ /* Horizontal margin */
+  opacity: 0.7;
+ /* Slight transparency */
+}
+/* Navbar links hover effect */
+.navitems ul li a:hover {
+  opacity: 1;
+ /* Full opacity */
+  border-bottom: 1px solid black;
+ /* Bottom border */
+}
+/* Profile section */
+.profile {
+  display: flex;
+ /* Flexbox layout */
+  justify-content: right;
+ /* Align right */
+  width: 20%;
+ /* 20% width */
+  border: 1px solid black;
+ /* Black border */
+}
+/* Profile image */
+.profile img {
+  width: 50px;
+ /* Set width */
+  border-radius: 100px;
+ /* Round image */
+  cursor: pointer;
+ /* Pointer cursor */
+  border: 2px solid black;
+ /* Black border */
+  transition: all 0.1s ease;
+ /* Smooth transition */
+}
+/* Profile image hover effect */
+.profile img:hover {
+  border: 5px solid black;
+ /* Thicker border on hover */
+}
+/* Dropdown links */
+.navber-other-links {
+  width: 120px;
+ /* Set width */
+  position: absolute;
+ /* Absolute positioning */
+  top: 53px;
+ /* Position below navbar */
+  right: 21px;
+ /* Align right */
+  box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.75);
+ /* Add shadow */
+  background-color: #ffffff;
+ /* White background */
+  padding: 0 10px;
+ /* Horizontal padding */
+  border: 1px solid red;
+ /* Red border */
+  text-align: center;
+ /* Center text */
+  display: none;
+ /* Hide by default */
+}
+/* Dropdown list items */
+.navber-other-links ul li {
+  list-style: none;
+ /* No bullet points */
+  margin: 3px 0;
+ /* Vertical margin */
+}
+/* Dropdown links */
+.navber-other-links ul li a {
+  color: black;
+ /* Black text */
+  font-size: 16px;
+ /* Font size */
+  font-weight: bold;
+ /* Bold text */
+  text-decoration: none;
+ /* No underline */
+  opacity: 0.7;
+ /* Slight transparency */
+}
+/* Dropdown links hover effect */
+.navber-other-links ul li a:hover {
+  opacity: 1;
+ /* Full opacity */
+  border-bottom: 1px solid black;
+ /* Bottom border */
+}
+/* =================== main section all css ========================*/
+/* Center the main element's content */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+/* Center the container's content inside the main element */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
 /* Styling the email verification container with background, padding, and shadow */
 .email-verification {
   background-color: #ffffff;
@@ -42,126 +199,84 @@
   border-radius: 5px;
   box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, 0.75);
 }
-
 /* Aligning OTP input fields in a row with space between them */
 .otp-inputs {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-/* Styling individual OTP input boxes with uniform size, text alignment, and border */
-.otp-inputs input {
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    font-size: 18px;
-    border: 1px solid #dddddd;
-    border-radius: 4px;
-}
-
-/* Styling the description text with margin, font size, and center alignment */
-.description {
-    margin: 15px 0;
-    font-size: 16px;
-    text-align: center;
-}
-
-/* Highlighting the email text with bold font, background color, and rounded corners */
-.description span {
-    font-weight: bold;
-    background-color: gray;
-    border-radius: 5px;
-}
-
-/* Initially hiding the error message, with styling for visibility when shown */
-.error {
-    display: none;
-    color: red;
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-/* Styling the submit button with full width, rounded corners, and cursor pointer */
-.submit {
-    width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-/* Changing the appearance of the submit button when disabled */
-.submit:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
-
-.navber{
   display: flex;
   justify-content: space-between;
-  box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, 0.75);
-  background-color: #ffffff;
-  padding: 0 20px;
-  border: 1px solid red;
+  margin-bottom: 20px;
 }
-
-.logo{
-  width: 20%;
-  border: 1px solid black;
+/* Styling individual OTP input boxes with uniform size, text alignment, and border */
+.otp-inputs input {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
 }
-
-.navitems{
-  width: 60%;
-  border: 1px solid black;
-}
-
-.navitems ul{
- display: flex;
- justify-content: right;
-}
-
-.navitems ul li{
-  list-style: none;
-}
-
-.navitems ul li a{
-  color: black;
+/* Styling the description text with margin, font size, and center alignment */
+.description {
+  margin: 15px 0;
   font-size: 16px;
+  text-align: center;
+}
+/* Highlighting the email text with bold font, background color, and rounded corners */
+.description span {
   font-weight: bold;
-  text-decoration: none;
-  margin: 0 10px;
-  opacity: 0.7;
+  background-color: gray;
+  border-radius: 5px;
 }
- 
-.navitems ul li a:hover{
-  opacity: 1;
-  border-bottom: 1px solid black;
+/* Initially hiding the error message, with styling for visibility when shown */
+.error {
+  display: none;
+  color: red;
+  font-size: 16px;
+  margin-bottom: 15px;
 }
-
-.profile{
-  display: flex;
-  justify-content: right; 
-  width: 20%;
-  border: 1px solid black;
-}
-
-.profile img{
-  width: 50px;
-  height: auto;
-  border-radius: 100px;
+/* Styling the submit button with full width, rounded corners, and cursor pointer */
+.submit {
+  width: 100%;
+  border-radius: 5px;
   cursor: pointer;
-  border: 5px solid black;
+  font-size: 18px;
 }
-
-
-
-  
-
-  /* Tablet and Desktop view */
-  @media (min-width: 768px) {
-    .email-verification {
+/* Changing the appearance of the submit button when disabled */
+.submit:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+/*====================== footer all css code ================== */
+/* Footer content */
+.footer-content {
+  position: absolute;
+ /* Absolute positioning */
+  bottom: 0;
+ /* Align bottom */
+  left: 0;
+ /* Align left */
+  background-color: #ffffff;
+ /* White background */
+  height: 60px;
+ /* Set height */
+  width: 100%;
+ /* Full width */
+  display: flex;
+ /* Flexbox layout */
+  justify-content: center;
+ /* Center horizontally */
+  align-items: center;
+ /* Center vertically */
+  box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.75);
+ /* Add shadow */
+}
+/* Footer link */
+.footer-content p a {
+  color: black;
+ /* Black text */
+}
+/* Tablet and Desktop view */
+@media (min-width: 768px) {
+  .email-verification {
       min-width: 400px;
-    }
-  }
-  
+ }
+}
