@@ -26,3 +26,41 @@ if (isset($_SESSION['error'])) {
 ?>
 
 
+<!-- home.php -->
+<?php
+
+include '../helper/StackManager.php'; 
+$title = "Page one";
+ob_start(); // Output buffering শুরু করুন
+?>
+<h2>page one</h2>
+
+<?php
+$content = ob_get_clean(); // Output buffering থেকে কনটেন্ট নিন
+
+// Push CSS
+StackManager::push('styles', '<link rel="stylesheet" href="styles.css">');
+
+// Push JavaScript
+StackManager::push('scripts', '<script> alert("I\'m coming from child"); </script>');
+
+include 'layout.php'; // layout.php ফাইলটি ইমপোর্ট করুন
+
+?>
+
+
+{
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Config\\": "config/"
+        },
+        "files": [
+        "config/pathupdate.php"
+        ]
+    }
+}
+
+
+
+

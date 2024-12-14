@@ -1,10 +1,5 @@
-<?php
-// Autoload all the necessary classes and dependencies
-require __DIR__ . '/../../vendor/autoload.php';
+<?php require __DIR__ . '/../../vendor/autoload.php'; ?>
 
-// Use the Path class from the Config namespace
-use Config\path;
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,13 +8,13 @@ use Config\path;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
      <!-- Toastr CSS -->
-     <link rel="stylesheet" href="<?php echo htmlspecialchars(Path::public_url('assets/toastr/toastr.min.css')) ?>">
+     <link rel="stylesheet" href="<?php echo htmlspecialchars(public_url('assets/toastr/toastr.min.css')) ?>">
     <!-- Link to the external CSS file for styling the register page -->
     <link
       rel="stylesheet"
-      href="<?php echo htmlspecialchars(Path::public_url('assets/css/auth/login.css')) ?>"
+      href="<?php echo htmlspecialchars(public_url('assets/css/auth/login.css')) ?>"
     />
-  </head>
+  </head> 
   <body>
     <!-- Header section (currently empty) -->
     <header></header>
@@ -113,10 +108,10 @@ use Config\path;
     <footer></footer>
 
     <!-- jQuery (required for Toastr) -->
-    <script src="<?php echo htmlspecialchars(Path::public_url('assets/jquery/jquery-3.6.0.min.js')) ?>"></script>
+    <script src="<?php echo htmlspecialchars(public_url('assets/jquery/jquery-3.6.0.min.js')) ?>"></script>
 
     <!-- js file links -->
-    <script src="<?php echo htmlspecialchars(Path::public_url('assets/toastr/toastr.min.js')) ?>"></script>
+    <script src="<?php echo htmlspecialchars(public_url('assets/toastr/toastr.min.js')) ?>"></script>
   
     <script>
       // Toggle password visibility based on checkbox state

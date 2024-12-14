@@ -15,7 +15,7 @@ class Path {
     }
 
     public static function public_url($path = '') {
-        $baseUrl = 'http://localhost/breage/public';
+        $baseUrl = 'http://localhost/auth-app/public';
         return $baseUrl . '/' . ltrim($path, '/');
     }
 }

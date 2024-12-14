@@ -1,11 +1,4 @@
-<?php
-// Autoload all the necessary classes and dependencies
-require __DIR__ . '/../../vendor/autoload.php';
-
-// Use the Path class from the Config namespace
-use Config\path;
-
-?>
+<?php require __DIR__ . '/../../vendor/autoload.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,11 +7,11 @@ use Config\path;
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Register</title>
       <!-- Toastr CSS -->
-      <link rel="stylesheet" href="<?php echo htmlspecialchars(Path::public_url('assets/toastr/toastr.min.css')) ?>">
+      <link rel="stylesheet" href="<?php echo htmlspecialchars(public_url('assets/toastr/toastr.min.css')) ?>">
       <!-- Link to the external CSS file for styling the register page -->
       <link
          rel="stylesheet"
-         href="<?php echo htmlspecialchars(Path::public_url('assets/css/auth/email-verification.css')) ?>"
+         href="<?php  echo htmlspecialchars(public_url('assets/css/auth/email-verification.css'));  ?>"
          />
    </head>
    <body>
@@ -44,7 +37,7 @@ use Config\path;
             <!-- Profile section with an image that acts as a toggle button -->
             <div class="profile">
                <!-- Profile image linked from the assets directory -->
-               <img id="profile" src="<?php echo htmlspecialchars(Path::public_url('assets/images/demo-profile-image.jpg')) ?>" alt="profile">
+               <img id="profile" src="<?php echo htmlspecialchars(public_url('assets/images/demo-profile-image.jpg')) ?>" alt="profile">
             </div>
          </div>
          <!-- Additional navigation links, toggled by the profile image -->
@@ -101,9 +94,9 @@ use Config\path;
          </div>
       </footer>
       <!-- jQuery (required for Toastr) -->
-      <script src="<?php echo htmlspecialchars(Path::public_url('assets/jquery/jquery-3.6.0.min.js')) ?>"></script>
+      <script src="<?php echo htmlspecialchars(public_url('assets/jquery/jquery-3.6.0.min.js')) ?>"></script>
       <!-- js file links -->
-      <script src="<?php echo htmlspecialchars(Path::public_url('assets/toastr/toastr.min.js')) ?>"></script>
+      <script src="<?php echo htmlspecialchars(public_url('assets/toastr/toastr.min.js')) ?>"></script>
       <script>
          // Select all the OTP input fields and the submit button
          const inputs = document.querySelectorAll('.otp-inputs input');

@@ -1,3 +1,6 @@
+
+<?php require __DIR__ . '/../vendor/autoload.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +9,8 @@
     <title>Document</title>
 </head>
 <body>
-    Header
+    <?php 
+    echo public_url('sdjfsgdfjds');
+    ?>
 </body>
 </html>
