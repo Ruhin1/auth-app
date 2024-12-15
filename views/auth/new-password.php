@@ -1,26 +1,16 @@
-<?php require __DIR__ . '/../../vendor/autoload.php'; ?>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
-     <!-- Toastr CSS -->
-     <link rel="stylesheet" href="<?php echo htmlspecialchars(public_url('assets/toastr/toastr.min.css')) ?>">
-    <!-- Link to the external CSS file for styling the register page -->
-    <link
-      rel="stylesheet"
-      href="<?php echo htmlspecialchars(public_url('assets/css/auth/new-password.css')) ?>"
-    />
-  </head>
-  <body>
-    <!-- Header section (currently empty) -->
-    <header></header>
+<?php
 
-    <!-- Main section to contain the form -->
-    <main>
-      <div class="container">
+require __DIR__ . '/../../vendor/autoload.php';
+
+include '../helper/StackManager.php'; 
+$title = "New Password";
+ob_start(); // Output buffering শুরু করুন
+?>
+
+<!-- code---------------start  -->
+
+<div class="container">
         <div class="form">
           <!-- Registration form -->
           <form action="" method="POST">
@@ -88,6 +78,71 @@
           </form>
         </div>
       </div>
+
+<!-- code---------------end  -->
+
+
+
+<?php
+$content = ob_get_clean(); 
+
+StackManager::push('styles', '<link rel="stylesheet" href="' . htmlspecialchars(public_url('assets/css/auth/new-password.css')) . '" />');
+
+
+
+// Push JavaScript
+StackManager::push('scripts', '
+    <script>
+      // Get the checkbox element that toggles the password visibility
+      const togglePassword = document.getElementById("eye-checkbox");
+     
+      // Add an event listener for when the checkbox state changes
+      togglePassword.addEventListener("change", function () {
+        // Get the password and confirm password input fields
+        var password = document.getElementById("password");
+        var confirmPassword = document.getElementById("confirm-password");
+
+        // If the checkbox is checked, show the passwords as plain text
+        // If unchecked, hide the passwords by setting the type to password
+        if (this.checked) {
+          password.type = "text";
+          confirmPassword.type = "text";
+        } else {
+          password.type = "password";
+          confirmPassword.type = "password";
+        }
+      });
+    </script>
+');
+
+
+include '../layout/guest.php'; 
+
+?> 
+<?php die(); ?>
+<?php require __DIR__ . '/../../vendor/autoload.php'; ?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+     <!-- Toastr CSS -->
+     <link rel="stylesheet" href="<?php echo htmlspecialchars(public_url('assets/toastr/toastr.min.css')) ?>">
+    <!-- Link to the external CSS file for styling the register page -->
+    <link
+      rel="stylesheet"
+      href="<?php echo htmlspecialchars(public_url('assets/css/auth/new-password.css')) ?>"
+    />
+  </head>
+  <body>
+    <!-- Header section (currently empty) -->
+    <header></header>
+
+    <!-- Main section to contain the form -->
+    <main>
+      
     </main>
 
     <!-- Footer section (currently empty) -->

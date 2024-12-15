@@ -1,29 +1,15 @@
 <?php
-// Autoload all the necessary classes and dependencies
+
 require __DIR__ . '/../../vendor/autoload.php';
+
+include '../helper/StackManager.php'; 
+$title = "Register";
+ob_start(); // Output buffering শুরু করুন
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
-    <!-- Toastr CSS -->
-     <link rel="stylesheet" href="<?php echo htmlspecialchars(public_url('assets/toastr/toastr.min.css')) ?>">
-    <!-- Link to the external CSS file for styling the register page -->
-    <link
-      rel="stylesheet"
-      href="<?php echo htmlspecialchars(public_url('assets/css/auth/register.css')) ?>"
-    />
-  </head>
-  <body>
-    <!-- Header section (currently empty) -->
-    <header></header>
+<!-- code---------------start  -->
 
-    <!-- Main section to contain the form -->
-    <main>
-      <div class="container">
+<div class="container">
         <div class="form">
           <!-- Registration form -->
           <form action="" method="POST">
@@ -176,18 +162,21 @@ require __DIR__ . '/../../vendor/autoload.php';
           </div>
         </div>
       </div>
-    </main>
 
-    <!-- Footer section (currently empty) -->
-    <footer></footer>
+<!-- code---------------end  -->
 
-    <!-- jQuery (required for Toastr) -->
-    <script src="<?php echo htmlspecialchars(public_url('assets/jquery/jquery-3.6.0.min.js')) ?>"></script>
 
-    <!-- js file links -->
-     <script src="<?php echo htmlspecialchars(public_url('assets/toastr/toastr.min.js')) ?>"></script>
-     
-     <script>
+
+<?php
+$content = ob_get_clean(); 
+
+StackManager::push('styles', '<link rel="stylesheet" href="' . htmlspecialchars(public_url('assets/css/auth/register.css')) . '" />');
+
+
+
+// Push JavaScript
+StackManager::push('scripts', '
+   <script>
       // Get the checkbox element that toggles the password visibility
       const togglePassword = document.getElementById("eye-checkbox");
 
@@ -198,7 +187,7 @@ require __DIR__ . '/../../vendor/autoload.php';
         var confirmPassword = document.getElementById("confirm-password");
 
         // If the checkbox is checked, show the passwords as plain text
-        // If unchecked, hide the passwords by setting the type to 'password'
+        // If unchecked, hide the passwords by setting the type to password
         if (this.checked) {
           password.type = "text";
           confirmPassword.type = "text";
@@ -207,6 +196,11 @@ require __DIR__ . '/../../vendor/autoload.php';
           confirmPassword.type = "password";
         }
       });
-    </script> 
-  </body>
-</html>
+     </script>
+');
+
+
+include '../layout/guest.php'; 
+
+?> 
+

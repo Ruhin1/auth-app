@@ -1,12 +1,9 @@
 <?php include_once __DIR__ . '/../helper/StackManager.php'; ?>
-
-<!-- layout.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $title ?? 'Default Title'; ?></title>
+    
+    <?php include_once __DIR__ . '/partials/linktop.php' ?>
     <!-- Render CSS stack -->
     <?php echo StackManager::render('styles'); ?>
 </head>
@@ -26,6 +23,7 @@
         <?php include_once __DIR__ . '/partials/footer.php' ?>
     </footer>
     <!-- Render JS stack -->
+    <?php include_once __DIR__ . '/partials/linkbottom.php' ?>
     <?php echo StackManager::render('scripts'); ?>
 </body>
 </html>

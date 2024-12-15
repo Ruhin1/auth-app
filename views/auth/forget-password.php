@@ -1,26 +1,15 @@
-<?php require __DIR__ . '/../../vendor/autoload.php'; ?>
+<?php
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
-     <!-- Toastr CSS -->
-     <link rel="stylesheet" href="<?php echo htmlspecialchars(public_url('assets/toastr/toastr.min.css')) ?>">
-    <!-- Link to the external CSS file for styling the register page -->
-    <link
-      rel="stylesheet"
-      href="<?php echo htmlspecialchars(public_url('assets/css/auth/forget-password.css')) ?>"
-    />
-  </head>
-  <body>
-    <!-- Header section (currently empty) -->
-    <header></header>
+require __DIR__ . '/../../vendor/autoload.php';
 
-    <!-- Main section to contain the form -->
-    <main>
-      <div class="container">
+include '../helper/StackManager.php'; 
+$title = "forgot password";
+ob_start(); // Output buffering শুরু করুন
+?>
+
+<!-- code---------------start  -->
+
+<div class="container">
         <div class="form">
           <!-- Forget password form -->
           <form action="" method="POST">
@@ -60,16 +49,24 @@
           </div>
         </div>
       </div>
-    </main>
- 
-    <!-- Footer section (currently empty) -->
-    <footer></footer>
-    
-    <!-- jQuery (required for Toastr) -->
-    <script src="<?php echo htmlspecialchars(public_url('assets/jquery/jquery-3.6.0.min.js')) ?>"></script>
 
-    <!-- js file links -->
-    <script src="<?php echo htmlspecialchars(public_url('assets/toastr/toastr.min.js')) ?>"></script>
-    
-  </body>
-</html>
+<!-- code---------------end  -->
+
+
+
+<?php
+$content = ob_get_clean(); 
+
+StackManager::push('styles', '<link rel="stylesheet" href="' . htmlspecialchars(public_url('assets/css/auth/forget-password.css')) . '" />');
+
+
+
+// Push JavaScript
+// StackManager::push('scripts', '
+//     <!-- jQuery (required for Toastr) -->
+//     <script src="' . htmlspecialchars(public_url('assets/jquery/jquery-3.6.0.min.js')) . '"></script>
+// '); 
+
+include '../layout/guest.php'; 
+
+?> 
