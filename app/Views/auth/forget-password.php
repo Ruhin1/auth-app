@@ -1,8 +1,4 @@
 <?php
-
-require __DIR__ . '/../../vendor/autoload.php';
-
-include '../helper/StackManager.php'; 
 $title = "forgot password";
 ob_start(); // Output buffering শুরু করুন
 ?>
@@ -67,6 +63,6 @@ StackManager::push('styles', '<link rel="stylesheet" href="' . htmlspecialchars(
 //     <script src="' . htmlspecialchars(public_url('assets/jquery/jquery-3.6.0.min.js')) . '"></script>
 // '); 
 
-include '../layout/guest.php'; 
+include __DIR__ . '/../layout/guest.php'; 
 
 ?> 

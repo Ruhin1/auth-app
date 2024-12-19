@@ -1,8 +1,5 @@
 <?php
 
-require __DIR__ . '/../../vendor/autoload.php';
-
-include '../helper/StackManager.php'; 
 $title = "Login";
 ob_start(); // Output buffering শুরু করুন
 ?>
@@ -120,7 +117,7 @@ StackManager::push('scripts', '
 ');
 
 
-include '../layout/guest.php'; 
+include __DIR__ . '/../layout/guest.php'; 
 
 ?> 
 

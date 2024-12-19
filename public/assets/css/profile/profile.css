@@ -1,0 +1,239 @@
+/* Reset all elements to have zero margin and padding and use border-box for box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Set html and body to take full height of the viewport and center content */
+  html, body {
+   /* height: 100%;
+    */
+   /* display: flex;
+    */
+   /* justify-content: center;
+    */
+   /* align-items: center;
+    */
+    margin: 0;
+    background-color: #e9ecef;
+  }
+  /*======================= header section all css code ==========================*/
+  /* Navbar styling */
+  .navber {
+    display: flex;
+   /* Align in a row */
+    justify-content: space-between;
+   /* Space out elements */
+    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.75);
+   /* Add shadow */
+    background-color: #ffffff;
+   /* White background */
+    padding: 0 20px;
+   /* Horizontal padding */
+    border: 1px solid red;
+   /* Red border */
+    height: 53px;
+   /* Set height */
+  }
+  /* Logo styling */
+  .logo {
+    width: 20%;
+   /* 20% width */
+    border: 1px solid black;
+   /* Black border */
+    display: flex;
+   /* Flexbox layout */
+    align-items: center;
+   /* Center vertically */
+  }
+  /* Logo link */
+  .logo a {
+    text-decoration: none;
+   /* No underline */
+    font-size: 20px;
+   /* Font size */
+    color: black;
+   /* Black text */
+  }
+  /* Navbar items */
+  .navitems {
+    width: 60%;
+   /* 60% width */
+    border: 1px solid black;
+   /* Black border */
+    display: flex;
+   /* Flexbox layout */
+    align-items: center;
+   /* Center vertically */
+    justify-content: right;
+   /* Align right */
+  }
+  /* Navbar list items */
+  .navitems ul li {
+    list-style: none;
+   /* No bullet points */
+  }
+  /* Navbar links */
+  .navitems ul li a {
+    color: black;
+   /* Black text */
+    font-size: 16px;
+   /* Font size */
+    font-weight: bold;
+   /* Bold text */
+    text-decoration: none;
+   /* No underline */
+    margin: 0 10px;
+   /* Horizontal margin */
+    opacity: 0.7;
+   /* Slight transparency */
+  }
+  /* Navbar links hover effect */
+  .navitems ul li a:hover {
+    opacity: 1;
+   /* Full opacity */
+    border-bottom: 1px solid black;
+   /* Bottom border */
+  }
+  /* Profile section */
+  .profile {
+    display: flex;
+   /* Flexbox layout */
+    justify-content: right;
+   /* Align right */
+    width: 20%;
+   /* 20% width */
+    border: 1px solid black;
+   /* Black border */
+  }
+  /* Profile image */
+  .profile img {
+    width: 50px;
+   /* Set width */
+    border-radius: 100px;
+   /* Round image */
+    cursor: pointer;
+   /* Pointer cursor */
+    border: 2px solid black;
+   /* Black border */
+    transition: all 0.1s ease;
+   /* Smooth transition */
+  }
+  /* Profile image hover effect */
+  .profile img:hover {
+    border: 5px solid black;
+   /* Thicker border on hover */
+  }
+  /* Dropdown links */
+  .navber-other-links {
+    width: 120px;
+   /* Set width */
+    position: absolute;
+   /* Absolute positioning */
+    top: 53px;
+   /* Position below navbar */
+    right: 21px;
+   /* Align right */
+    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.75);
+   /* Add shadow */
+    background-color: #ffffff;
+   /* White background */
+    padding: 0 10px;
+   /* Horizontal padding */
+    border: 1px solid red;
+   /* Red border */
+    text-align: center;
+   /* Center text */
+    display: none;
+   /* Hide by default */
+  }
+  /* Dropdown list items */
+  .navber-other-links ul li {
+    list-style: none;
+   /* No bullet points */
+    margin: 3px 0;
+   /* Vertical margin */
+  }
+  /* Dropdown links */
+  .navber-other-links ul li a {
+    color: black;
+   /* Black text */
+    font-size: 16px;
+   /* Font size */
+    font-weight: bold;
+   /* Bold text */
+    text-decoration: none;
+   /* No underline */
+    opacity: 0.7;
+   /* Slight transparency */
+  }
+  /* Dropdown links hover effect */
+  .navber-other-links ul li a:hover {
+    opacity: 1;
+   /* Full opacity */
+    border-bottom: 1px solid black;
+   /* Bottom border */
+  }
+/* ------------------------------ */
+
+.main{
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+} 
+
+.content{
+    text-align: center;
+    border: 1px solid rgb(77, 76, 76);
+    width: 220px;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, 0.75);
+}
+
+.content img{
+    width: 150px;
+    height: 170px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
+}
+
+.content h3{
+    margin: 5px 0;
+}
+
+.content .email{
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/* -------------------------------- */
+/* Footer content */
+.footer-content {
+    position: absolute;
+   /* Absolute positioning */
+    bottom: 0;
+   /* Align bottom */
+    left: 0;
+   /* Align left */
+    background-color: #ffffff;
+   /* White background */
+    height: 60px;
+   /* Set height */
+    width: 100%;
+   /* Full width */
+    display: flex;
+   /* Flexbox layout */
+    justify-content: center;
+   /* Center horizontally */
+    align-items: center;
+   /* Center vertically */
+    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.75);
+   /* Add shadow */
+  }
+  /* Footer link */
+  .footer-content p a {
+    color: black;
+   /* Black text */
+  }

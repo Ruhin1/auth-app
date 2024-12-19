@@ -6,5 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'fad6da965a0c70df73fb032c1b1ad657' => $baseDir . '/config/paths.php',
+    '5b44a28740fb7ddc79901b8fefc2f81f' => $baseDir . '/config/paths.php',
+    '263f993c5f6c454215306a9f9ffe99e2' => $vendorDir . '/autoload.php',
+    'c20a22301ad1ff2b6f29f66421d93e1d' => $baseDir . '/config/StackManager.php',
 );

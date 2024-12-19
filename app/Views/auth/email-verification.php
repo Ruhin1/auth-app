@@ -1,8 +1,5 @@
 <?php
 
-require __DIR__ . '/../../vendor/autoload.php';
-
-include '../helper/StackManager.php'; 
 $title = "Email Verification";
 ob_start(); // Output buffering শুরু করুন
 ?> 
@@ -114,6 +111,6 @@ StackManager::push('scripts', '
 ');
 
 
-include '../layout/app.php'; 
+include __DIR__ .'/../layout/app.php'; 
 
 ?> 

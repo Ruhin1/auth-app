@@ -1,9 +1,10 @@
 <?php
 // StackManager.php
+$viewsDir = __DIR__ . '../app/Views/';
 class StackManager
 {
     private static $stacks = [];
-
+    
     // Push content into a specific stack
     public static function push($stack, $content)
     {
@@ -21,4 +22,8 @@ class StackManager
         }
         return implode("\n", self::$stacks[$stack]);
     }
+}
+
+foreach(glob($viewsDir . '*.php') as $file){
+    require_once $file;
 }

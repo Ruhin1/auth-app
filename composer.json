@@ -1,11 +1,20 @@
 {
+    "name": "authapp/authapp",
+    "type": "project",
+    "description": "The skeleton application for the Laravel framework.",
+    "keywords": ["authapp", "framework","php"],
+    "license": "MIT",
+
     "autoload": {
         "psr-4": {
             "App\\": "app/",
+            "Core\\": "core/",
             "Config\\": "config/"
         },
         "files": [
-            "config/paths.php"
+            "config/paths.php",
+            "vendor/autoload.php",
+            "config/StackManager.php"
         ]
     }
 }

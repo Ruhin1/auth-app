@@ -1,4 +1,4 @@
-<?php include_once __DIR__ . '/../helper/StackManager.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +10,7 @@
 <body>
     <!-- Header -->
     <header>
-        <?php include_once __DIR__ . '/partials/header.php' ?>
+     
     </header>
 
     <!-- Main Content -->
@@ -20,10 +20,10 @@
 
     <!-- Footer -->
     <footer>
-        <?php include_once __DIR__ . '/partials/footer.php' ?>
+        
     </footer>
     <!-- Render JS stack -->
     <?php include_once __DIR__ . '/partials/linkbottom.php' ?>
     <?php echo StackManager::render('scripts'); ?>
 </body>
-</html>
+</html> 

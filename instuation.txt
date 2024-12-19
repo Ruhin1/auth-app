@@ -16,4 +16,5 @@ User Table
 3.email(varger,nullable)
 4.password(varger,not null)
 5.photo(vargar,nullable)
+6. username(vargar)
  
