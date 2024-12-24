@@ -1,6 +1,6 @@
 <?php
 $title = "Profile";
-ob_start(); // Output buffering শুরু করুন
+ob_start();
 ?>
 
 <!-- code---------------start  -->

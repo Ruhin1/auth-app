@@ -6,7 +6,7 @@
     <!-- Render CSS stack -->
     <?php echo StackManager::render('styles'); ?>
 </head>
-<body>
+<body> 
     <!-- Header -->
     <header>
         <?php include_once __DIR__ . '/partials/header.php' ?>

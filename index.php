@@ -3,6 +3,11 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 use Core\Router;
+use Dotenv\Dotenv;
+
+// Load .env file
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 // Start session
 session_start(); 

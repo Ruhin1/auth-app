@@ -1,7 +1,7 @@
 <?php
 
 function public_url($path = '') {
-    $baseUrl = 'http://authapp.local/public';
+    $baseUrl = $_ENV['APP_URL'] .'public';
     return $baseUrl . '/' . ltrim($path, '/');
 }
 

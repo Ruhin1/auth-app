@@ -16,7 +16,8 @@
             "vendor/autoload.php",
             "config/StackManager.php"
         ]
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
     }
 }
-
-
