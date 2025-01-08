@@ -1,0 +1,19 @@
+# সিস্টেম জেনারেটেড ফাইল
+.DS_Store
+
+# Node.js প্যাকেজ ফোল্ডার
+node_modules/
+
+# Composer vendor ফোল্ডার
+vendor/
+
+# Laravel environment ফাইল
+#.env
+
+# IDE বা Editor ফাইল
+*.log
+.idea/
+.vscode/
+
+# কাস্টম টেম্প ফোল্ডার
+tmp/
