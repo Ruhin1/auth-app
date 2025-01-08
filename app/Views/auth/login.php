@@ -117,7 +117,7 @@ StackManager::push('scripts', '
 ');
 
 
-include __DIR__ . '/../layout/guest.php'; 
+include  __DIR__ . '/../layout/guest.php';
 
 ?> 
 

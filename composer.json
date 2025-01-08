@@ -12,7 +12,7 @@
             "Config\\": "config/"
         },
         "files": [
-            "config/paths.php",
+            "config/Paths.php",
             "vendor/autoload.php",
             "config/StackManager.php"
         ]
